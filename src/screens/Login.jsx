@@ -10,6 +10,7 @@ import {
   Image,
 } from "react-native";
 import React, { useState } from "react";
+import Icon from "react-native-vector-icons/AntDesign";
 
 import colors from "../../assets/colors";
 import Input from "../components/Input";
@@ -101,11 +102,17 @@ const Login = ({ navigation }) => {
           alignItems: "center",
           justifyContent: "flex-start",
           paddingLeft: 90,
+          position: "relative",
         }}
       >
-        <View
-          style={[!button ? styles.rememberMe : styles.rememerMeTrue]}
-        ></View>
+        <View style={[!button ? styles.rememberMe : styles.rememerMeTrue]}>
+          <Icon
+            style={{ position: "absolute", bottom: -2, right: 0.5 }}
+            name="check"
+            size={14}
+            color="#ffffff"
+          />
+        </View>
         <Text style={{ color: "#4B4B4B" }}>Remeber me</Text>
       </TouchableOpacity>
 
