@@ -9,7 +9,7 @@ import {
   Button,
   Image,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 import colors from "../../assets/colors";
 import Input from "../components/Input";
@@ -18,11 +18,15 @@ import gm from "../../assets/logos/gm.png";
 
 const Login = ({ navigation }) => {
   //
+  const [button, setButton] = useState(false);
 
   function navigate() {
     navigation.navigate("Signup");
   }
 
+  const handleBtn = () => {
+    setButton(!button);
+  };
   //
 
   return (
@@ -88,9 +92,22 @@ const Login = ({ navigation }) => {
         </View>
       </View>
 
-      <View style={{ marginVertical: 10, width: "45%" }}>
+      <TouchableOpacity
+        onPress={handleBtn}
+        style={{
+          marginVertical: 10,
+          width: "100%",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          paddingLeft: 90,
+        }}
+      >
+        <View
+          style={[!button ? styles.rememberMe : styles.rememerMeTrue]}
+        ></View>
         <Text style={{ color: "#4B4B4B" }}>Remeber me</Text>
-      </View>
+      </TouchableOpacity>
 
       <View style={{ marginVertical: 30, width: "65%" }}>
         <TouchableOpacity
@@ -187,4 +204,20 @@ const styles = StyleSheet.create({
     height: 36,
   },
   formView: { width: "100%" },
+  rememberMe: {
+    width: 14,
+    height: 13,
+    backgroundColor: "#EC5D70",
+    marginRight: 4,
+    borderWidth: 1,
+    borderColor: "#EC5D70",
+  },
+  rememerMeTrue: {
+    backgroundColor: "#ffffff",
+    width: 14,
+    height: 13,
+    marginRight: 4,
+    borderWidth: 1,
+    borderColor: "#EC5D70",
+  },
 });
