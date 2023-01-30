@@ -7,22 +7,16 @@ import {
 } from "react-native";
 import React from "react";
 
+import LeftIcon from "react-native-vector-icons/AntDesign";
+
 const Main = () => {
+  function navigateToHome() {
+    navigation.navigate("Home");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ width: "80%", height: "75%", position: "relative" }}>
-        <TouchableOpacity style={styles.backButton} onPress={navigateToHome}>
-          <Icon style={{}} name="left" size={19} color="#E94057" />
-        </TouchableOpacity>
-        <View style={{ position: "absolute", right: 20 }}>
-          <TouchableOpacity onPress={navigateToMain}>
-            <Text style={{ fontSize: 16, fontWeight: "700", color: "#E94057" }}>
-              Skip
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <Text>Main</Text>
-      </View>
+      <Text>Main</Text>
     </SafeAreaView>
   );
 };

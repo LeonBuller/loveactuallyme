@@ -36,6 +36,7 @@ const GetStarted = ({ navigation }) => {
   function navigateToHome() {
     navigation.navigate("Home");
   }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ width: "80%", height: "20%", position: "relative" }}>
@@ -195,7 +196,7 @@ const styles = StyleSheet.create({
   textUnSelected: { color: "#000000", fontSize: 16, fontWeight: "600" },
 
   iconSelectedProf: { right: -92, color: "#ffffff" },
-  iconSelectedSocialAndDating: { right: -150, color: "#ffffff" },
+  iconSelectedSocialAndDating: { right: -138, color: "#ffffff" },
 
   iconUnSelectedProf: { right: -92 },
   iconUnSelectedSocialAndDating: { right: -138 },
