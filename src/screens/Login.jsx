@@ -129,11 +129,11 @@ const Login = ({ navigation }) => {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "center",
           marginBottom: 20,
         }}
       >
-        <View style={{ marginRight: 45, width: "30%" }}>
+        <View style={{ width: "30%", marginRight: 15 }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -146,11 +146,12 @@ const Login = ({ navigation }) => {
               borderRadius: 10,
             }}
           >
-            <Image source={fb} style={{ width: 41 }} />
+            <Image source={fb} style={{ width: 41, height: 32 }} />
             <Text style={{ fontSize: 12 }}>Facebook</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ width: "30%" }}>
+
+        <View style={{ width: "30%", marginLeft: 15 }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -164,8 +165,8 @@ const Login = ({ navigation }) => {
               paddingBottom: 14,
             }}
           >
-            <Image source={gm} style={{ width: 41 }} />
-            <Text style={{ fontSize: 12 }}>Gmail</Text>
+            <Image source={gm} style={{ width: 38, height: 25 }} />
+            <Text style={{ fontSize: 12, paddingTop: 6 }}>Gmail</Text>
           </TouchableOpacity>
         </View>
       </View>
