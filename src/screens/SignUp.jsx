@@ -21,8 +21,12 @@ const SignUp = ({ navigation }) => {
   //
   const [button, setButton] = useState(false);
 
-  function navigate() {
+  function navigateToLogin() {
     navigation.navigate("Login");
+  }
+
+  function navigatetoGetStarted() {
+    navigation.navigate("Getstarted");
   }
 
   const handleBtn = () => {
@@ -113,11 +117,12 @@ const SignUp = ({ navigation }) => {
             color="#ffffff"
           />
         </View>
-        <Text style={{ color: "#4B4B4B" }}>Remeber me</Text>
+        <Text style={{ color: "#4B4B4B" }}>Remember me</Text>
       </TouchableOpacity>
 
       <View style={{ marginVertical: 30, width: "65%" }}>
         <TouchableOpacity
+          onPress={navigatetoGetStarted}
           style={{
             backgroundColor: "#E94057",
             borderRadius: 20,
@@ -127,7 +132,7 @@ const SignUp = ({ navigation }) => {
             borderColor: "#E94057",
           }}
         >
-          <Text style={{ color: "#fff", fontSize: 13 }}>Sign In</Text>
+          <Text style={{ color: "#fff", fontSize: 13 }}>Sign Up</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 20, alignItems: "center", marginBottom: 50 }}>
@@ -180,7 +185,7 @@ const SignUp = ({ navigation }) => {
 
       <View style={{ flexDirection: "row", marginTop: 40 }}>
         <Text>Have an account already?</Text>
-        <TouchableOpacity onPress={navigate}>
+        <TouchableOpacity onPress={navigateToLogin}>
           <Text style={{ color: "#EC5D70", paddingLeft: 2 }}>Sign In</Text>
         </TouchableOpacity>
       </View>

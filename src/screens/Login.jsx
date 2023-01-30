@@ -21,8 +21,12 @@ const Login = ({ navigation }) => {
   //
   const [button, setButton] = useState(false);
 
-  function navigate() {
+  function navigateToRegister() {
     navigation.navigate("Signup");
+  }
+
+  function navigateToGetStarted() {
+    navigation.navigate("Getstarted");
   }
 
   const handleBtn = () => {
@@ -113,11 +117,12 @@ const Login = ({ navigation }) => {
             color="#ffffff"
           />
         </View>
-        <Text style={{ color: "#4B4B4B" }}>Remeber me</Text>
+        <Text style={{ color: "#4B4B4B" }}>Remember me</Text>
       </TouchableOpacity>
 
       <View style={{ marginVertical: 30, width: "65%" }}>
         <TouchableOpacity
+          onPress={navigateToGetStarted}
           style={{
             backgroundColor: "#E94057",
             borderRadius: 20,
@@ -180,7 +185,7 @@ const Login = ({ navigation }) => {
 
       <View style={{ flexDirection: "row", marginTop: 40 }}>
         <Text>Don’t have an account?</Text>
-        <TouchableOpacity onPress={navigate}>
+        <TouchableOpacity onPress={navigateToRegister}>
           <Text style={{ color: "#EC5D70", paddingLeft: 2 }}>Sign Up</Text>
         </TouchableOpacity>
       </View>
