@@ -198,5 +198,5 @@ const styles = StyleSheet.create({
   iconSelectedSocialAndDating: { right: -150, color: "#ffffff" },
 
   iconUnSelectedProf: { right: -92 },
-  iconUnSelectedSocialAndDating: { right: -150 },
+  iconUnSelectedSocialAndDating: { right: -138 },
 });
