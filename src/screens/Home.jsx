@@ -10,7 +10,7 @@ import React from "react";
 import fb from "../../assets/logos/fb.png";
 import gm from "../../assets/logos/gm.png";
 import apple from "../../assets/logos/apple.png";
-
+import Icon from "../../assets/Icon.jsx";
 const Home = ({ navigation }) => {
   function navigate() {
     navigation.navigate("Signup");

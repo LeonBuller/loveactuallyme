@@ -37,6 +37,10 @@ const GetStarted = ({ navigation }) => {
     navigation.navigate("Home");
   }
 
+  function navigateToInterested() {
+    navigation.navigate("Interested");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ width: "80%", height: "20%", position: "relative" }}>
@@ -144,6 +148,15 @@ const GetStarted = ({ navigation }) => {
           </View>
         </TouchableOpacity>
       </View>
+
+      <View>
+        <TouchableOpacity
+          style={styles.continue}
+          onPress={navigateToInterested}
+        >
+          <Text style={{ color: "#ffffff" }}>Continue</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
@@ -200,4 +213,13 @@ const styles = StyleSheet.create({
 
   iconUnSelectedProf: { right: -92 },
   iconUnSelectedSocialAndDating: { right: -138 },
+  continue: {
+    borderWidth: 1,
+    borderColor: "#E94057",
+    backgroundColor: "#E94057",
+    paddingVertical: 15,
+    paddingHorizontal: 90,
+    borderRadius: 20,
+    fontWeight: 600,
+  },
 });

@@ -8,6 +8,8 @@ import Login from "./src/screens/Login";
 import SignUp from "./src/screens/SignUp";
 import GetStarted from "./src/screens/GetStarted";
 import Main from "./src/screens/Main";
+import Interested from "./src/screens/Interested";
+import Upload from "./src/screens/Upload";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,8 @@ export default function App() {
         <Stack.Screen name="Signup" component={SignUp} />
         <Stack.Screen name="Getstarted" component={GetStarted} />
         <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Interested" component={Interested} />
+        <Stack.Screen name="Upload" component={Upload} />
       </Stack.Navigator>
     </NavigationContainer>
   );

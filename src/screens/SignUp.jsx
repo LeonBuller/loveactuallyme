@@ -135,7 +135,8 @@ const SignUp = ({ navigation }) => {
           <Text style={{ color: "#fff", fontSize: 13 }}>Sign Up</Text>
         </TouchableOpacity>
       </View>
-      <View style={{ marginTop: 20, alignItems: "center", marginBottom: 50 }}>
+
+      <View style={{ marginTop: 20, alignItems: "center", marginBottom: 40 }}>
         <Text style={{ color: "#4B4B4B" }}>Or continue with</Text>
       </View>
       <View
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: "25",
     fontWeight: "600",
-    marginBottom: 50,
+    marginBottom: 20,
   },
   container: {
     backgroundColor: "#ffffff",
