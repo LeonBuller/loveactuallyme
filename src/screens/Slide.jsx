@@ -5,7 +5,10 @@ import Close from "react-native-vector-icons/Ionicons";
 import Chat from "react-native-vector-icons/Ionicons";
 import Heart from "react-native-vector-icons/Fontisto";
 
-const Slide = () => {
+const Slide = ({ navigation }) => {
+  function navigateToMessages() {
+    navigation.navigate("Messages");
+  }
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
@@ -54,6 +57,11 @@ const Slide = () => {
           </TouchableOpacity>
         </View>
       </View>
+      <View>
+        <TouchableOpacity onPress={navigateToMessages}>
+          <Text>Go To Messages</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -73,8 +81,12 @@ const styles = StyleSheet.create({
   circle: {
     width: 42,
     height: 42,
-    backgroundColor: "white",
-    shadowColor: "#000000",
+    backgroundColor: "#FFFFFF",
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
     borderRadius: 55,
   },
   titleContainer: {
@@ -106,12 +118,13 @@ const styles = StyleSheet.create({
   leftBtn: {
     width: 49,
     height: 49,
-    backgroundColor: "gray",
+    backgroundColor: "#ffffff",
     shadowColor: "#000000",
     borderRadius: 55,
     left: 20,
-
     position: "absolute",
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
   },
   midBtn: {
     width: 49,
@@ -121,6 +134,11 @@ const styles = StyleSheet.create({
     left: 115,
     borderRadius: 55,
     position: "absolute",
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
   },
   rightBtn: {
     width: 49,
@@ -130,8 +148,41 @@ const styles = StyleSheet.create({
     borderRadius: 55,
     left: 215,
     position: "absolute",
+    backgroundColor: "#FFFFFF",
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
   },
-  closeIcon: { position: "absolute", left: 9.5, top: 8 },
-  chatIcon: { position: "absolute", left: 12, top: 12 },
-  heartIcon: { position: "absolute", left: 10, top: 12 },
+  closeIcon: {
+    position: "absolute",
+    left: 9.5,
+    top: 8,
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
+  },
+  chatIcon: {
+    position: "absolute",
+    left: 12,
+    top: 12,
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
+  },
+  heartIcon: {
+    position: "absolute",
+    left: 10,
+    top: 12,
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15,
+    shadowOffset: { width: 1, height: 13 },
+  },
 });

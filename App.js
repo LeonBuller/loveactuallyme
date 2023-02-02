@@ -12,6 +12,7 @@ import Interested from "./src/screens/Interested";
 import Upload from "./src/screens/Upload";
 import RegisterSuccesfull from "./src/screens/RegisterSuccesfull";
 import Slide from "./src/screens/Slide";
+import Messages from "./src/screens/Messages";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ export default function App() {
         <Stack.Screen name="Upload" component={Upload} />
         <Stack.Screen name="RegisterSuccess" component={RegisterSuccesfull} />
         <Stack.Screen name="Slide" component={Slide} />
+        <Stack.Screen name="Messages" component={Messages} />
       </Stack.Navigator>
     </NavigationContainer>
   );
