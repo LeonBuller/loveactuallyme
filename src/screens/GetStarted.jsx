@@ -55,18 +55,8 @@ const GetStarted = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View
-        style={{
-          width: "80%",
-          height: "55%",
-          flexDirection: "column",
-          alignContent: "center",
-          textAlign: "center",
-          justifyContent: "flex-start",
-          paddingLeft: 12,
-          marginBottom: 100,
-        }}
-      >
+
+      <View style={styles.lookingForContainer}>
         <View style={{}}>
           <Text style={{ fontSize: 25, fontWeight: "600" }}>
             I am looking for
@@ -221,5 +211,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 90,
     borderRadius: 20,
     fontWeight: 600,
+  },
+  lookingForContainer: {
+    width: "80%",
+    height: "55%",
+    flexDirection: "column",
+    alignContent: "center",
+    textAlign: "center",
+    justifyContent: "flex-start",
+    paddingLeft: 12,
+    marginBottom: 100,
   },
 });

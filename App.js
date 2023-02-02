@@ -10,6 +10,8 @@ import GetStarted from "./src/screens/GetStarted";
 import Main from "./src/screens/Main";
 import Interested from "./src/screens/Interested";
 import Upload from "./src/screens/Upload";
+import RegisterSuccesfull from "./src/screens/RegisterSuccesfull";
+import Slide from "./src/screens/Slide";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +26,8 @@ export default function App() {
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Interested" component={Interested} />
         <Stack.Screen name="Upload" component={Upload} />
+        <Stack.Screen name="RegisterSuccess" component={RegisterSuccesfull} />
+        <Stack.Screen name="Slide" component={Slide} />
       </Stack.Navigator>
     </NavigationContainer>
   );
