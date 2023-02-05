@@ -8,6 +8,7 @@ import {
   Image,
 } from "react-native";
 import React, { useState } from "react";
+import Matches from "../components/Matches";
 
 import Search from "react-native-vector-icons/AntDesign";
 import Filter from "react-native-vector-icons/Ionicons";
@@ -15,15 +16,17 @@ import Filter from "react-native-vector-icons/Ionicons";
 import mockdata from "../../mockdata";
 
 import image1 from "../../assets/matches/1.png";
+import MessageGeneral from "../components/MessagesGeneral";
+
 const Messages = () => {
   const [text, setText] = useState("");
 
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row", position: "relative" }}>
+      <View style={styles.titleAndFilter}>
         <Text style={styles.title}>Messages</Text>
 
-        <View style={{ position: "absolute", right: -135, top: -2 }}>
+        <View style={styles.filterBtnContainer}>
           <View style={styles.shadowCircle}>
             <TouchableOpacity style={styles.filterBtn}>
               <Filter
@@ -36,7 +39,6 @@ const Messages = () => {
           </View>
         </View>
       </View>
-
       <View style={styles.inputContainer}>
         <Search
           size={18.5}
@@ -54,67 +56,33 @@ const Messages = () => {
 
       {/* Matches  */}
 
-      <View
-        style={{
-          height: "12%",
-          width: "100%",
-          marginBottom: 30,
-          marginTop: 10,
-        }}
-      >
-        <Text style={{ fontSize: 17, fontWeight: "600", paddingVertical: 10 }}>
-          Matches
-        </Text>
+      <View style={styles.matchesContainer}>
+        <Text style={styles.messagesAndMatchesTitle}>Matches</Text>
         <ScrollView
           scrollEventThrottle={16}
           horizontal
           showsHorizontalScrollIndicator={false}
         >
-          <View style={{ paddingTop: 8 }}>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-              <Image
-                width={60}
-                height={60}
-                source={image1}
-                style={{ resizeMode: "cover", marginLeft: 10 }}
-              />
-            </ScrollView>
-          </View>
+          <Matches />
         </ScrollView>
       </View>
 
       {/* Messages  */}
-      <View style={{ height: "50%", borderWidth: 1 }}></View>
+
+      <View style={styles.messagesContainer}>
+        <Text style={styles.messagesAndMatchesTitle}>Messages</Text>
+        <ScrollView
+          scrollEventThrottle={16}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={{ marginTop: 25 }}>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              {/* One Item */}
+              <MessageGeneral />
+            </ScrollView>
+          </View>
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -151,15 +119,33 @@ const styles = StyleSheet.create({
     marginLeft: 7,
     fontWeight: "700",
   },
-  filterIconSearch: { position: "absolute", left: 5.8, top: 8 },
+  filterIconSearch: { position: "absolute", left: 8, top: 8 },
   filterBtn: {},
   shadowCircle: {
-    width: 40,
+    width: 45,
     height: 45,
     backgroundColor: "white",
     borderRadius: 15,
     position: "relative",
     borderWidth: 1.2,
     borderColor: "#E8E6EA",
+  },
+  titleAndFilter: { flexDirection: "row", position: "relative" },
+  filterBtnContainer: { position: "absolute", right: -135, top: -2 },
+  matchesContainer: {
+    height: "12%",
+    width: "105%",
+    marginBottom: 30,
+    marginTop: 10,
+  },
+  messagesContainer: {
+    height: "50%",
+    width: "100%",
+    marginBottom: 30,
+  },
+  messagesAndMatchesTitle: {
+    fontSize: 17,
+    fontWeight: "600",
+    paddingVertical: 10,
   },
 });
