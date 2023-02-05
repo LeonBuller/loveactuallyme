@@ -75,7 +75,7 @@ const Messages = () => {
           scrollEventThrottle={16}
           showsVerticalScrollIndicator={false}
         >
-          <View style={{ marginTop: 25 }}>
+          <View style={{ marginTop: 24 }}>
             <ScrollView showsVerticalScrollIndicator={false}>
               {/* One Item */}
               <MessageGeneral />

@@ -29,8 +29,8 @@ const GetStarted = ({ navigation }) => {
     setProfesionall(!profesionall);
   };
 
-  function navigateToMain() {
-    navigation.navigate("Main");
+  function navigateToSlide() {
+    navigation.navigate("Slide");
   }
 
   function navigateToHome() {
@@ -48,7 +48,7 @@ const GetStarted = ({ navigation }) => {
           <LeftIcon style={{}} name="left" size={19} color="#E94057" />
         </TouchableOpacity>
         <View style={{ position: "absolute", right: 20 }}>
-          <TouchableOpacity onPress={navigateToMain}>
+          <TouchableOpacity onPress={navigateToSlide}>
             <Text style={{ fontSize: 16, fontWeight: "700", color: "#E94057" }}>
               Skip
             </Text>
