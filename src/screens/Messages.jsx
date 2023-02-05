@@ -4,12 +4,17 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  ScrollView,
+  Image,
 } from "react-native";
 import React, { useState } from "react";
 
 import Search from "react-native-vector-icons/AntDesign";
 import Filter from "react-native-vector-icons/Ionicons";
 
+import mockdata from "../../mockdata";
+
+import image1 from "../../assets/matches/1.png";
 const Messages = () => {
   const [text, setText] = useState("");
 
@@ -18,11 +23,11 @@ const Messages = () => {
       <View style={{ flexDirection: "row", position: "relative" }}>
         <Text style={styles.title}>Messages</Text>
 
-        <View style={{ position: "absolute", right: -160, top: 5 }}>
+        <View style={{ position: "absolute", right: -135, top: -2 }}>
           <View style={styles.shadowCircle}>
             <TouchableOpacity style={styles.filterBtn}>
               <Filter
-                size={18.5}
+                size={27}
                 name="md-filter-outline"
                 color="#E94057"
                 style={styles.filterIconSearch}
@@ -36,15 +41,80 @@ const Messages = () => {
         <Search
           size={18.5}
           name="search1"
-          color="#99999A"
+          color="#cfcfcf"
           style={styles.searchIconStyle}
         />
-        <TextInput placeholder="Search" style={styles.inputStyle}></TextInput>
+        <TextInput
+          onChangeText={(newText) => setText(newText)}
+          defaultValue={text}
+          placeholder="Search"
+          style={styles.inputStyle}
+        ></TextInput>
       </View>
 
-      {/* Search Results */}
+      {/* Matches  */}
 
-      <View style={{ height: "55%" }}></View>
+      <View
+        style={{
+          height: "12%",
+          width: "100%",
+          marginBottom: 30,
+          marginTop: 10,
+        }}
+      >
+        <Text style={{ fontSize: 17, fontWeight: "600", paddingVertical: 10 }}>
+          Matches
+        </Text>
+        <ScrollView
+          scrollEventThrottle={16}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        >
+          <View style={{ paddingTop: 8 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+              <Image
+                width={60}
+                height={60}
+                source={image1}
+                style={{ resizeMode: "cover", marginLeft: 10 }}
+              />
+            </ScrollView>
+          </View>
+        </ScrollView>
+      </View>
+
+      {/* Messages  */}
+      <View style={{ height: "50%", borderWidth: 1 }}></View>
     </View>
   );
 };
@@ -66,6 +136,8 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingLeft: 43,
     borderColor: "#E8E6EA",
+    fontSize: 13,
+    borderRadius: 22,
   },
   inputContainer: { marginTop: 25, flexDirection: "row", position: "relative" },
   searchIconStyle: {
@@ -75,21 +147,19 @@ const styles = StyleSheet.create({
     top: 15,
   },
   title: {
-    fontSize: 26,
+    fontSize: 30,
     marginLeft: 7,
+    fontWeight: "700",
   },
-  filterIconSearch: { position: "absolute", left: 3.5, top: 3.5 },
+  filterIconSearch: { position: "absolute", left: 5.8, top: 8 },
   filterBtn: {},
   shadowCircle: {
-    width: 26,
-    height: 26,
+    width: 40,
+    height: 45,
     backgroundColor: "white",
-    shadowColor: "rgba(0, 0, 0, 0.1)",
-    shadowOpacity: 0.8,
-    elevation: 6,
-    shadowRadius: 15,
-    shadowOffset: { width: 1, height: 13 },
-    borderRadius: 55,
+    borderRadius: 15,
     position: "relative",
+    borderWidth: 1.2,
+    borderColor: "#E8E6EA",
   },
 });
