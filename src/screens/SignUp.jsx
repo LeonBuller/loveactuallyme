@@ -146,7 +146,7 @@ const SignUp = ({ navigation }) => {
           marginBottom: 20,
         }}
       >
-        <View style={{ width: "30%", marginRight: 15 }}>
+        <View style={{ width: "30%", marginRight: 15, position: "relative" }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -159,8 +159,13 @@ const SignUp = ({ navigation }) => {
               borderRadius: 10,
             }}
           >
-            <Image source={fb} style={{ width: 41, height: 32 }} />
-            <Text style={{ fontSize: 12 }}>Facebook</Text>
+            <Image
+              source={fb}
+              style={{ width: 50, height: 32, marginRight: 60 }}
+            />
+            <Text style={{ fontSize: 12, position: "absolute", right: 13 }}>
+              Facebook
+            </Text>
           </TouchableOpacity>
         </View>
 
@@ -178,7 +183,7 @@ const SignUp = ({ navigation }) => {
               paddingBottom: 14,
             }}
           >
-            <Image source={gm} style={{ width: 38, height: 25 }} />
+            <Image source={gm} style={{ width: 30, height: 25 }} />
             <Text style={{ fontSize: 12, paddingTop: 6 }}>Gmail</Text>
           </TouchableOpacity>
         </View>

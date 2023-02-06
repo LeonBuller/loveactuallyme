@@ -25,7 +25,7 @@ const Home = ({ navigation }) => {
           marginBottom: 20,
         }}
       >
-        <View style={{ width: 247, marginVertical: 17 }}>
+        <View style={{ width: 247, marginVertical: 17, position: "relative" }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -46,13 +46,15 @@ const Home = ({ navigation }) => {
                 alignItems: "center",
               }}
             >
-              <Image source={fb} />
-              <Text style={{ fontSize: 12, marginLeft: 0 }}>Facebook</Text>
+              <Image source={fb} style={{ marginRight: 30 }} />
+              <Text style={{ fontSize: 12, position: "absolute", right: -21 }}>
+                Facebook
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={{ width: 247, marginVertical: 17 }}>
+        <View style={{ width: 247, marginVertical: 17, position: "relative" }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -74,13 +76,15 @@ const Home = ({ navigation }) => {
                 alignItems: "center",
               }}
             >
-              <Image source={gm} />
-              <Text style={{ fontSize: 12, marginLeft: 0 }}>Gmail</Text>
+              <Image source={gm} style={{ marginRight: 30 }} />
+              <Text style={{ fontSize: 12, position: "absolute", right: -5 }}>
+                Gmail
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={{ width: 247, marginTop: 17 }}>
+        <View style={{ width: 247, marginTop: 17, position: "relative" }}>
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -102,8 +106,10 @@ const Home = ({ navigation }) => {
                 alignItems: "center",
               }}
             >
-              <Image source={apple} />
-              <Text style={{ fontSize: 12 }}>Apple</Text>
+              <Image source={apple} style={{ marginRight: 30 }} />
+              <Text style={{ fontSize: 12, position: "absolute", right: -10 }}>
+                Apple
+              </Text>
             </View>
           </TouchableOpacity>
         </View>

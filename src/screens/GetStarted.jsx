@@ -43,10 +43,18 @@ const GetStarted = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ width: "80%", height: "20%", position: "relative" }}>
+      <View
+        style={{
+          width: "80%",
+          height: "20%",
+          position: "absolute",
+          top: 120,
+        }}
+      >
         <TouchableOpacity style={styles.backButton} onPress={navigateToHome}>
           <LeftIcon style={{}} name="left" size={19} color="#E94057" />
         </TouchableOpacity>
+
         <View style={{ position: "absolute", right: 20 }}>
           <TouchableOpacity onPress={navigateToSlide}>
             <Text style={{ fontSize: 16, fontWeight: "700", color: "#E94057" }}>
@@ -139,7 +147,7 @@ const GetStarted = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <View>
+      <View style={{ position: "absolute", bottom: 180, right: 80 }}>
         <TouchableOpacity
           style={styles.continue}
           onPress={navigateToInterested}
@@ -173,7 +181,7 @@ const styles = StyleSheet.create({
     top: -20,
     borderWidth: 2,
     borderColor: "#E8E6EA",
-    padding: 24,
+    padding: 20,
     borderRadius: 15,
   },
   selectedButton: {
@@ -220,6 +228,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "flex-start",
     paddingLeft: 12,
-    marginBottom: 100,
+    position: "absolute",
+    top: 230,
   },
 });

@@ -53,6 +53,57 @@ const MessageGeneral = () => {
           </View>
         </View>
       </View>
+
+      <View style={styles.container}>
+        <View style={styles.wrapper}>
+          <Image width={60} height={60} source={image1} style={styles.image} />
+          <View style={styles.leftSide}>
+            <Text style={styles.leftText}>Amelie</Text>
+            <Text style={styles.leftText}>I am on my way.</Text>
+          </View>
+
+          <View style={styles.col}>
+            <Text style={styles.timeRecieved}>20 mins</Text>
+            <View style={styles.redCircle}>
+              <Text style={styles.circleInside}>1</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.container}>
+        <View style={styles.wrapper}>
+          <Image width={60} height={60} source={image1} style={styles.image} />
+          <View style={styles.leftSide}>
+            <Text style={styles.leftText}>Amelie</Text>
+            <Text style={styles.leftText}>I am on my way.</Text>
+          </View>
+
+          <View style={styles.col}>
+            <Text style={styles.timeRecieved}>20 mins</Text>
+            <View style={styles.redCircle}>
+              <Text style={styles.circleInside}>1</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.container}>
+        <View style={styles.wrapper}>
+          <Image width={60} height={60} source={image1} style={styles.image} />
+          <View style={styles.leftSide}>
+            <Text style={styles.leftText}>Amelie</Text>
+            <Text style={styles.leftText}>I am on my way.</Text>
+          </View>
+
+          <View style={styles.col}>
+            <Text style={styles.timeRecieved}>20 mins</Text>
+            <View style={styles.redCircle}>
+              <Text style={styles.circleInside}>1</Text>
+            </View>
+          </View>
+        </View>
+      </View>
     </>
   );
 };
